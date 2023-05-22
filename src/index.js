@@ -11,10 +11,11 @@ import {
 } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const currency ='USD';
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App/>,
+        element: <App currency={currency}/>,
     },
     {
         path: "/details/:id",
