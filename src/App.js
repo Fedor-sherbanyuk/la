@@ -39,6 +39,16 @@ function App({currency: globalCurrency}) {
 
             })
     }, [categoryValue])
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products/category/' + categoryValue)
+            .then(res => res.json())
+            .then(json => {
+                console.log(json)
+                setListOfTypeProducts(json)
+
+            })
+    }, [categoryValue])
+
     console.log(listOfProducts)
 
     return (
